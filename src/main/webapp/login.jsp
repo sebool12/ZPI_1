@@ -32,6 +32,13 @@
 		won't send any actual emails and database will be each hour re-initialized.
 	</p>
 
+	<strong>You can use these credentials to login (username / password):</strong>
+
+	<ul>
+		<li>admin / admin</li>
+		<li>guest / guest</li>
+	</ul>
+
 	<form action='/j_spring_security_check' method='post' class="form-signin">
 		<h2 class="form-signin-heading">Please Sign In:</h2>
 		<input type='text' name='j_username' placeholder='Username' class="form-control" />
