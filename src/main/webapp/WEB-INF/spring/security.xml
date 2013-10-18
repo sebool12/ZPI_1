@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security
+http://www.springframework.org/schema/security/spring-security-3.1.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<http security="none" pattern="/login.jsp" />
+
+	<http security="none" pattern="/resources/**" />
+
+	<http security="none" pattern="/favicon.ico" />
+
+	<http auto-config="true">
+		<form-login login-page="/login.jsp" />
+		<logout logout-url="/logout" />
+		<intercept-url pattern="/**" access="ROLE_USER" />
+	</http>
+	
+	<global-method-security pre-post-annotations="enabled" proxy-target-class="true" />
+
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder hash="md5" />
+			<jdbc-user-service data-source-ref="myDataSource"
+				authorities-by-username-query="select users.username, roles.name from users
+												join user_role on users.user_id = user_role.user_id
+												join roles on user_role.role_id = roles.role_id
+												where users.username = ?"
+				users-by-username-query="select username,password,enabled from users where username = ?" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
