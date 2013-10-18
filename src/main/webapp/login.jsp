@@ -45,6 +45,16 @@
 		<input type='password' name='j_password' placeholder="Password" class="form-control" />
 		<input type='submit' class="btn btn-lg btn-primary btn-block" />
 	</form>
+	
+	<footer>
+		<br /> <br />
+		<p>
+			&copy; Jiri Pinkas 2013 | <a
+				href="https://github.com/jirkapinkas/example-mailer-vaadin-spring"
+				target="_blank">This project on Github</a>
+		</p>
+	</footer>
+
 
 </div>
 
