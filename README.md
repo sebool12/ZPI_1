@@ -14,7 +14,7 @@
 
 <p>
 	How to run:
-	<code>mvn package</code>
+	<code>mvn package</code> <br />
 	<code>mvn jetty:run</code>
 </p>
 
