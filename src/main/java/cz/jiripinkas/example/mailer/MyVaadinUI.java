@@ -30,7 +30,7 @@ public class MyVaadinUI extends UI {
 	public static final String VIEW_USERS = "users";
 
 	@Autowired
-	private MailsTableView mailsTableView;
+	private MailsTableView mailsTableViewRefactored;
 
 	@Autowired
 	private SendEmailView sendEmailView;
@@ -47,7 +47,7 @@ public class MyVaadinUI extends UI {
 	protected void init(VaadinRequest request) {
 		navigator = new Navigator(this, this);
 		navigator.addView(VIEW_SEND_EMAIL, sendEmailView);
-		navigator.addView(VIEW_ALL_EMAILS, mailsTableView);
+		navigator.addView(VIEW_ALL_EMAILS, mailsTableViewRefactored);
 		navigator.addView(VIEW_CONFIGURATION, userDetailsView);
 		navigator.addView(VIEW_USERS, usersTableView);
 	}
