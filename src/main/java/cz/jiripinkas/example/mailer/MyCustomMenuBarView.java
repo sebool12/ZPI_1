@@ -26,10 +26,10 @@ public abstract class MyCustomMenuBarView extends CustomComponent implements
 	}
 
 	private MenuBar constructMenuBar() {
-		MenuBar menuBar1 = new MenuBar();
-		menuBar1.setWidth("100%");
+		MenuBar menuBar2 = new MenuBar();
+		menuBar2.setWidth("100%");
 
-		MenuItem mainItem = menuBar1.addItem("Main", null);
+		MenuItem mainItem = menuBar2.addItem("Main", null);
 		mainItem.addItem("User details", new MenuBar.Command() {
 			@Override
 			public void menuSelected(MenuItem selectedItem) {
@@ -45,7 +45,7 @@ public abstract class MyCustomMenuBarView extends CustomComponent implements
 			}
 		});
 
-		MenuItem dataItem = menuBar1.addItem("Data", null);
+		MenuItem dataItem = menuBar2.addItem("Data", null);
 
 		dataItem.addItem("All emails", new MenuBar.Command() {
 			@Override
@@ -70,7 +70,7 @@ public abstract class MyCustomMenuBarView extends CustomComponent implements
 			});
 		}
 
-		return menuBar1;
+		return menuBar2;
 	}
 
 	protected abstract Layout buildLayout();
