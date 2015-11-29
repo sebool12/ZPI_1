@@ -21,7 +21,7 @@ public class Email {
 	// @Size(min = 1)
 	// @org.hibernate.validator.constraints.Email
 	@Column(name = "email_to")
-	private String emailTo = "";
+	private String emailToRefactory = "";
 
 	// @Size(min = 1)
 	@Column(name = "email_subject")
@@ -63,11 +63,11 @@ public class Email {
 	}
 
 	public String getEmailTo() {
-		return emailTo;
+		return emailToRefactory;
 	}
 
 	public void setEmailTo(String emailTo) {
-		this.emailTo = emailTo;
+		this.emailToRefactory = emailTo;
 	}
 
 	public String getSubject() {
